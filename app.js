@@ -1,4 +1,4 @@
-const menubtn = document.getElementById('menu-btn');
+const menubtn = document.getElementById('abrirMenu');
 const sidebar = document.getElementById('sidebar');
 
 menubtn.addEventListener('click', function() {
