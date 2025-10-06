@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(15, 15, 15);
+    font-family: "Inter", sans-serif;
+}
+
+#menu-toggle {
+    display: none;
+  }
+
+.sidebar {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 1.5rem;
+    align-content: center;
+}
+
+#Busca {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 1.5rem;
+    align-content: center;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 20%;
+    height: 40px;    
+}
+
+#Novo {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 1.5rem;
+    align-content: center;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 20%;
+    height: 40px;
+    
+}
