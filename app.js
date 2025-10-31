@@ -1,6 +1,13 @@
-const menubtn = document.getElementById('abrirMenu');
-const sidebar = document.getElementById('sidebar');
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+    const Busca = document.getElementById('Busca');
 
-menubtn.addEventListener('click', function() {
-    sidebar.classList.toggle('active');
+    if (toggleButton && sidebar) {
+        toggleButton.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+        });
+    } else {
+        console.error('Toggle button or sidebar not found');
+    }
 });

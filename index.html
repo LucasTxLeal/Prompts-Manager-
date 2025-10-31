@@ -4,23 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nwl project</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <button class="menubtn" id="abrirMenu">☰ Menu</button>
-    
-    <div class="sidebar" id="sidebar" sidebar>
-        <h2>Prompts</h2>
-        <ul>
-            <li>
-                <input type="Text" id="Busca" placeholder="Buscar por título...">
-            </li>
-            <li>
-                <button id="Novo" placeholder="Novo">Novo Prompt</button>
-            </li>
-        </ul>
-    </div>
+    <button id="toggleSidebar" class="toggle-sidebar">
+        <img src="assets/collapse.svg" alt="Toggle sidebar" class="icon" />
+    </button>
+    <div class="app">
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar_header">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="Logo" /> 
+            </div>
+        </div>
+        <div class="sidebar_content">
+            <div class="search-container">
+                <div class="search">
+                    <img src="assets/search.svg" alt="Search" />
+                    <input type="text" id="Busca" placeholder="Buscar por título..." />
+                </div>
+                <button id="Novo">
+                    <span class="button_title">Novo prompt</span>
+                </button>
+                <div class="line_divisor"></div>
+            </div>
+            <div class="list">
+                <div class="prompt-item">
+                    <div class="prompt-content">
+                        <h3 class="title">⚡ Planejamento de tarefas semanais</h3>
+                        <p class="description">Ajude-me a organizar minha semana de forma ...</p>
+                    </div>
+                    <img src="assets/remove.svg" alt="Remove" class="remove-icon" />
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-content">
+                        <h3 class="title">Geração de ideias</h3>
+                        <p class="description">Liste 10 ideias criativas e objetivas para ...</p>
+                    </div>
+                    <img src="assets/remove.svg" alt="Remove" class="remove-icon" />
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-content">
+                        <h3 class="title">Refatoração</h3>
+                        <p class="description">Refatore o seguinte código para torná-lo mais ...</p>
+                    </div>
+                    <img src="assets/remove.svg" alt="Remove" class="remove-icon" />
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-content">
+                        <h3 class="title">Checklist</h3>
+                        <p class="description">Monte um checklist de ações necessárias para ...</p>
+                    </div>
+                    <img src="assets/remove.svg" alt="Remove" class="remove-icon" />
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-content">
+                        <h3 class="title">Documentação</h3>
+                        <p class="description">Escreva a documentação do seguinte método ..</p>
+                    </div>
+                    <img src="assets/remove.svg" alt="Remove" class="remove-icon" />
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-content">
+                        <h3 class="title">Otimização de query</h3>
+                        <p class="description">Reescreva a seguinte query SQL para otimizar ...</p>
+                    </div>
+                    <img src="assets/remove.svg" alt="Remove" class="remove-icon" />
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="main">
+        <div class="main-header">
+            <button class="btn-outline">
+                <img src="assets/copy.svg" alt="Copy icon" class="icon">
+                <span class="text">Copiar</span>
+            </button>
+            <button class="btn-primary">
+                <span class="text">Salvar</span>
+            </button>
+        </div>
+
+        <div data-placeholder="Título do prompt" class="editable-wrapper" id="editable-wrapper" >
+
+
+        <h1 class="prompt-title" id="prompt-title" contenteditable="true">
+            ⚡ Planejamento de tarefas semanais
+        </h1>
+        </div>
+        
+        <div data-placeholder="Conteúdo do prompt..." class="editable-wrapper" id="editable-wrapper">
+
+        <div class="prompt-content" id="prompt-content" contenteditable="true" >
+            Me ajude a organizar minha semana de forma equilibrada.
+            Distribua minhas tarefas profissionais e pessoais em blocos de tempo realistas.
+
+            Sugira horários para foco profundo e momentos para pausas estratégicas.
+
+            Inclua dicas de priorização. No final, entregue o plano em formato de checklist diário para fácil acompanhamento.
+        </div>
+        </div>
+    </main>
     
     <script src="app.js"></script>
 </body>
